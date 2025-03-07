@@ -10,7 +10,7 @@ let message = document.querySelector('.message');
 let score_title = document.querySelector('.score_title');
 
 let game_state = 'Start';
-imng.style.display = 'none';
+img.style.display = 'none';
 message.classList.add('messageStyle');
 
 document.addEventListener('keydown',(e) =>{
@@ -36,7 +36,7 @@ function play(){
             let pipe_sprite_props = element.getBoundingClientRect();
             bird_props = bird.getBoundingClientRect();
 
-            if(pipe_sprite_props.right <-+= 0){
+            if(pipe_sprite_props.right <= 0){
                 element.remove();
             }
             else{
@@ -55,9 +55,27 @@ function play(){
                 else{
                     if(pipe_sprite_props.right < bird_props.left &&
                         pipe_sprite_props.right + move_speed >= bird_props.left
-                        && element.increase_score == '1')
+                        && element.increase_score == '1'){
+                            score_val.innerHTML =+ score_val.innerHTML + 1;
+                        }
+                        element.style.left = pipe_sprite_props.left - move_speed + 
+                        'px';
                 }
+            }
+        });
+        requestAnimationFrame(move);
+
+    }
+    requestAnimationFrame(move);
+}
+    let bird_dy = 0;
+    function apply_gravity(){
+        if(game_state != 'Play') return;
+        bird_dy = bird_dy + grativy;
+        document.addEventListener('keydown', (e) => {
+            if(e.key == 'ArrowUp' || e.key == ' '){
+            <img src= "img"
             }
         })
     }
-}
+    
