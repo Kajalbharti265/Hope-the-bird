@@ -7,7 +7,7 @@
 .background{
     height: 100vh;
     width: 100vw;
-    background: url(https://static.vecteezy.com/system/resources/previ…round-cartoon-game-design-nature-asset-vector.jpg) no-repeat center center fixed;
+    background: url(C:\Users\kajal.jpg) no-repeat center center fixed;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
@@ -20,4 +20,20 @@
     top: n40vh;
     left: 30vw;
     z-index: 100;
+}
+.pipe_sprite{
+    position: fixed;
+    top: 40vh;
+    background: radial-gradiant(lightgreen 50%, green);
+    border: 5px solid black;
+}
+.message{
+    position: absolute;
+    z-index: 10;
+    color: black;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: cenetr;
+
 }
