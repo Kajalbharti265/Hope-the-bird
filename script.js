@@ -80,7 +80,7 @@ function play(){
 
         document.addEventListener('keyup', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
-                img.src = 'images/';
+                img.src = 'images/bird.png';
             }
         });
 
